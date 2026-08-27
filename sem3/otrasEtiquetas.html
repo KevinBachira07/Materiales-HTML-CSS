@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Receta: Paella Valenciana</title>
+</head>
+<body>
+
+<blockquote cite="https://chef-famoso.com/paella">
+    <p>
+        "La paella es el único plato que se defiende solo. 
+        No necesita salsa, no necesita adornos. Solo buenos ingredientes y paciencia."
+    </p>
+    <footer>
+        — <cite>Chef Joan Roca</cite>, 
+        <cite>El Celler de Can Roca</cite>
+    </footer>
+</blockquote>
+
+<hr>
+
+<p>
+    <strong>Receta tradicional</strong> de la Comunidad Valenciana. 
+    Un plato emblemático de la cocina española.
+</p>
+
+<p>
+    <small>Publicada el <time datetime="2026-06-08">8 de junio de 2026</time></small>
+</p>
+
+<hr>
+
+<p>
+    Tiempo original: <del>60 minutos</del> 
+    <ins>45 minutos</ins> (optimizado)
+</p>
+
+<p>
+    Ingrediente original: <del>conejo de monte</del> 
+    <ins>conejo de granja</ins> (más tierno)
+</p>
+
+<hr>
+
+<p>Receta en código:</p>
+
+<code>
+function cocinarPaella() {
+    const ingredientes = ['arroz', 'pollo', 'conejo'];
+    return new Plato('paella');
+}
+</code>
+
+<hr>
+
+<form action="/enviar-valoracion" method="POST">
+    <fieldset>
+        <legend>Tu opinión</legend>
+        
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+        </p>
+        
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </p>
+        
+        <p>
+            <label for="puntuacion">Puntuación:</label>
+            <input type="number" id="puntuacion" name="puntuacion" min="1" max="10">
+        </p>
+        
+        <p>
+            <button type="submit">Enviar</button>
+        </p>
+    </fieldset>
+</form>
+
+<hr>
+
+<address>
+    <p>Autor: María García</p>
+    <p>Email: <a href="mailto:maria@recetas.com">maria@recetas.com</a></p>
+    <p>Web: <a href="https://recetas.com">recetas.com</a></p>
+</address>
+
+</body>
+</html>

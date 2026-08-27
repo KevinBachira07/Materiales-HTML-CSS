@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Ana García López</title>
+    <!-- ============================================
+         CSS BÁSICO: Solo lo necesario para layout
+         Todo el significado viene de HTML semántico
+         ============================================ -->
+    <style>
+        /* Reset mínimo */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        /* ============================================
+           LAYOUT DE DOS COLUMNAS (flexbox básico)
+           ============================================ */
+        .cv-container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            display: flex;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* Columna izquierda: sidebar */
+        aside {
+            width: 35%;
+            background: #2c3e50;
+            color: white;
+            padding: 30px 20px;
+        }
+        
+        /* Columna derecha: contenido principal */
+        main {
+            width: 65%;
+            padding: 40px;
+        }
+        
+        /* ============================================
+           ESTILOS BÁSICOS DE TEXTO
+           ============================================ */
+        h1 { font-size: 2em; margin-bottom: 5px; color: #2c3e50; }
+        h2 { font-size: 1.1em; text-transform: uppercase; letter-spacing: 2px; margin: 25px 0 15px; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
+        aside h2 { color: white; border-bottom-color: #3498db; }
+        
+        h3 { font-size: 1em; margin: 15px 0 5px; color: #34495e; }
+        aside h3 { color: #ecf0f1; }
+        
+        p { margin-bottom: 10px; font-size: 0.95em; }
+        
+        /* Listas sin viñetas personalizadas */
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 8px; font-size: 0.9em; }
+        
+        /* Enlaces */
+        a { color: #3498db; text-decoration: none; }
+        aside a { color: #ecf0f1; }
+        
+        /* Separador visual básico */
+        hr { border: none; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0; }
+        
+        /* Imagen circular básica */
+        img { border-radius: 50%; width: 120px; height: 120px; object-fit: cover; display: block; margin: 0 auto 20px; border: 3px solid #3498db; }
+        
+        /* Badges de habilidades */
+        mark { background: #3498db; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; display: inline-block; margin: 2px; }
+        
+        /* Barra de progreso básica con <meter> */
+        meter { width: 100%; height: 8px; }
+        
+        /* Responsive básico */
+        @media (max-width: 768px) {
+            .cv-container { flex-direction: column; }
+            aside, main { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================
+     CONTENEDOR PRINCIPAL DEL CV
+     ============================================ -->
+<div class="cv-container">
+
+    <!-- ============================================
+         ASIDE: BARRA LATERAL (contenido complementario)
+         Contacto, habilidades, educación, idiomas
+         ============================================ -->
+    <aside>
+        
+        <!-- FIGURE: Foto de perfil con leyenda -->
+        <figure>
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" 
+                 alt="Foto profesional de Ana García López">
+            <figcaption style="text-align:center; font-size:0.8em; opacity:0.8;">Foto profesional</figcaption>
+        </figure>
+
+        <!-- HEADER del sidebar: Nombre y título -->
+        <header>
+            <h1 style="color:white; font-size:1.5em; text-align:center;">Ana García López</h1>
+            <p style="text-align:center; color:#3498db; font-weight:bold;">Desarrolladora Web Front-End</p>
+        </header>
+
+        <hr>
+
+        <!-- ADDRESS: Información de contacto -->
+        <section>
+            <h2>Contacto</h2>
+            <address style="font-style:normal;">
+                <ul>
+                    <li>📱 <a href="tel:+34600123456">+34 600 123 456</a></li>
+                    <li>✉️ <a href="mailto:ana.garcia@email.com">ana.garcia@email.com</a></li>
+                    <li>🌐 <a href="https://anagarcia.dev">anagarcia.dev</a></li>
+                    <li>📍 Madrid, España</li>
+                </ul>
+            </address>
+        </section>
+
+        <hr>
+
+        <!-- SECTION: Habilidades técnicas -->
+        <section>
+            <h2>Habilidades Técnicas</h2>
+            
+            <!-- DETAILS/SUMMARY: Habilidades desplegables -->
+            <details>
+                <summary><strong>Lenguajes</strong></summary>
+                <ul>
+                    <li><mark>HTML5</mark> <mark>CSS3</mark></li>
+                    <li><mark>JavaScript</mark> <mark>TypeScript</mark></li>
+                    <li><mark>Python</mark> <mark>SQL</mark></li>
+                </ul>
+            </details>
+            
+            <details>
+                <summary><strong>Frameworks</strong></summary>
+                <ul>
+                    <li><mark>React</mark> <mark>Vue.js</mark></li>
+                    <li><mark>Bootstrap</mark> <mark>Tailwind</mark></li>
+                </ul>
+            </details>
+
+            <!-- METER: Nivel de habilidades (semántico) -->
+            <p style="margin-top:15px; font-size:0.85em;">Nivel de HTML5:</p>
+            <meter value="95" min="0" max="100" low="50" high="80" optimum="90">95%</meter>
+            
+            <p style="font-size:0.85em; margin-top:10px;">Nivel de CSS3:</p>
+            <meter value="90" min="0" max="100" low="50" high="80" optimum="90">90%</meter>
+            
+            <p style="font-size:0.85em; margin-top:10px;">Nivel de JavaScript:</p>
+            <meter value="85" min="0" max="100" low="50" high="80" optimum="90">85%</meter>
+        </section>
+
+        <hr>
+
+        <!-- SECTION: Idiomas -->
+        <section>
+            <h2>Idiomas</h2>
+            <dl>
+                <dt><strong>Español</strong></dt>
+                <dd>Nativo</dd>
+                
+                <dt><strong>Inglés</strong></dt>
+                <dd>Avanzado (C1) <progress value="85" max="100">85%</progress></dd>
+                
+                <dt><strong>Francés</strong></dt>
+                <dd>Intermedio (B1) <progress value="60" max="100">60%</progress></dd>
+            </dl>
+        </section>
+
+        <hr>
+
+        <!-- SECTION: Educación (sidebar) -->
+        <section>
+            <h2>Educación</h2>
+            
+            <!-- ARTICLE: Cada título académico es independiente -->
+            <article>
+                <h3>Máster en Desarrollo Web</h3>
+                <p><time datetime="2022-09">2022</time> - <time datetime="2023-06">2023</time></p>
+                <p>Universidad Politécnica de Madrid</p>
+            </article>
+            
+            <article>
+                <h3>Grado en Ingeniería Informática</h3>
+                <p><time datetime="2018-09">2018</time> - <time datetime="2022-06">2022</time></p>
+                <p>Universidad Complutense de Madrid</p>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- SECTION: Certificaciones -->
+        <section>
+            <h2>Certificaciones</h2>
+            <ul>
+                <li><abbr title="Amazon Web Services">AWS</abbr> Certified Developer</li>
+                <li>Scrum Master Professional</li>
+                <li>Google UX Design</li>
+            </ul>
+        </section>
+
+    </aside>
+
+    <!-- ============================================
+         MAIN: CONTENIDO PRINCIPAL DEL CV
+         Perfil, experiencia, proyectos
+         Solo debe existir UN <main> por página
+         ============================================ -->
+    <main>
+
+        <!-- ARTICLE: Sobre mí (contenido autocontenido) -->
+        <article>
+            <header>
+                <h2>Perfil Profesional</h2>
+            </header>
+            <p>
+                Desarrolladora web especializada en crear experiencias digitales accesibles y 
+                semánticas. Apasionada por el <strong>HTML5 semántico</strong> y la 
+                <em>accesibilidad web</em>. Con 3 años de experiencia construyendo interfaces 
+                modernas y optimizadas para SEO.
+            </p>
+            <p>
+                Busco contribuir en proyectos que valoren la calidad del código y la 
+                inclusión digital.
+            </p>
+        </article>
+
+        <!-- SECTION: Experiencia Laboral -->
+        <section>
+            <h2>Experiencia Laboral</h2>
+
+            <!-- ARTICLE: Cada trabajo es independiente -->
+            <article>
+                <header>
+                    <h3>Desarrolladora Front-End Senior</h3>
+                    <p>
+                        <strong>TechSolutions Madrid</strong> | 
+                        <time datetime="2023-01">Enero 2023</time> - <time datetime="2026-06">Presente</time>
+                    </p>
+                </header>
+                
+                <!-- Lista de responsabilidades -->
+                <ul>
+                    <li>Liderazgo del rediseño completo del portal corporativo usando <mark>HTML5 semántico</mark></li>
+                    <li>Implementación de estándares <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 AA</li>
+                    <li>Optimización SEO que incrementó el tráfico orgánico en un 40%</li>
+                    <li>Mentoría de 2 desarrolladores junior en buenas prácticas</li>
+                </ul>
+                
+                <!-- BLOCKQUOTE: Logro destacado -->
+                <blockquote>
+                    <p>"Ana transformó nuestra arquitectura frontend, reduciendo el tiempo de carga en un 60%."</p>
+                    <footer>— <cite>María Rodríguez, CTO de TechSolutions</cite></footer>
+                </blockquote>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Desarrolladora Web Junior</h3>
+                    <p>
+                        <strong>Digital Agency Creative</strong> | 
+                        <time datetime="2022-06">Junio 2022</time> - <time datetime="2022-12">Diciembre 2022</time>
+                    </p>
+                </header>
+                <ul>
+                    <li>Maquetación responsive de 15+ sitios web para clientes</li>
+                    <li>Integración de APIs REST con JavaScript</li>
+                    <li>Colaboración en diseño UX con Figma</li>
+                </ul>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Prácticas en Desarrollo Web</h3>
+                    <p>
+                        <strong>Startup Innovatech</strong> | 
+                        <time datetime="2022-01">Enero 2022</time> - <time datetime="2022-05">Mayo 2022</time>
+                    </p>
+                </header>
+                <ul>
+                    <li>Desarrollo de componentes reutilizables en React</li>
+                    <li>Testing automatizado con Jest</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECTION: Proyectos Destacados -->
+        <section>
+            <h2>Proyectos Destacados</h2>
+
+            <article>
+                <header>
+                    <h3>E-commerce Accesible</h3>
+                    <p><time datetime="2025-03">Marzo 2025</time></p>
+                </header>
+                <p>
+                    Plataforma de comercio electrónico con <strong>100% cumplimiento WCAG</strong>.
+                    Implementación de navegación por teclado, lectores de pantalla y alto contraste.
+                </p>
+                <p>
+                    <a href="https://github.com/anagarcia/ecommerce-accesible">Ver código en GitHub</a> | 
+                    <a href="https://ecommerce-demo.anagarcia.dev">Demo en vivo</a>
+                </p>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Dashboard Analytics</h3>
+                    <p><time datetime="2024-08">Agosto 2024</time></p>
+                </header>
+                <p>
+                    Panel de control con visualización de datos en tiempo real usando 
+                    <abbr title="Application Programming Interface">API</abbr> de WebSockets.
+                </p>
+                <!-- CODE: Fragmento de código relevante -->
+                <pre><code>// Conexión WebSocket semántica
+const socket = new WebSocket('wss://api.analytics.com');
+socket.addEventListener('message', (event) => {
+    const data = JSON.parse(event.data);
+    updateDashboard(data);
+});</code></pre>
+            </article>
+        </section>
+
+        <!-- SECTION: Intereses -->
+        <section>
+            <h2>Intereses</h2>
+            <ul>
+                <li>Accesibilidad web y diseño inclusivo</li>
+                <li>Estándares <abbr title="World Wide Web Consortium">W3C</abbr> y <abbr title="Web Hypertext Application Technology Working Group">WHATWG</abbr></li>
+                <li>Contribución open source</li>
+                <li>Charlas técnicas y mentoría</li>
+            </ul>
+        </section>
+
+        <!-- FOOTER del main: Disponibilidad -->
+        <footer style="margin-top:30px; padding-top:20px; border-top:2px solid #eee;">
+            <p>
+                <strong>Disponibilidad:</strong> Inmediata | 
+                <strong>Modalidad:</strong> Híbrida/Remota | 
+                <strong>Ubicación preferida:</strong> Madrid o remoto
+            </p>
+            <p style="font-size:0.85em; color:#666; margin-top:10px;">
+                <small>Última actualización: <time datetime="2026-06-08">8 de junio de 2026</time></small>
+            </p>
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- ============================================
+     FOOTER GLOBAL: Información legal
+     ============================================ -->
+<<footer style="text-align:center; padding:20px; color:#666; font-size:0.85em;">
+    <p>CV generado con HTML5 semántico | <a href="https://github.com/anagarcia/cv">Ver código fuente</a></p>
+    <p><small>© 2026 Ana García López. Este CV está optimizado para lectores de pantalla.</small></p>
+</footer>
+
+</body>
+</html>

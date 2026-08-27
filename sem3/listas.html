@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Etiquetas de Lista HTML5</title>
+    <style>
+        body {
+            font-family: Arial;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        hr {
+            margin: 30px 0;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            color: #c0392b;
+        }
+
+        .resultado {
+            border: 1px dashed #3498db;
+            padding: 10px;
+            margin: 10px 0;
+            background: #fafafa;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Etiquetas de Lista en HTML5</h1>
+
+    <hr />
+
+    <!-- ==================== UL ==================== -->
+    <h2>1. ul — Lista Desordenada</h2>
+    <p>El orden <strong>no importa</strong>. Viñetas por defecto.</p>
+
+    <p><strong>Código que escribes:</strong></p>
+    <pre><code>&lt;ul&gt;
+    &lt;li&gt;Manzana&lt;/li&gt;
+    &lt;li&gt;Pera&lt;/li&gt;
+    &lt;li&gt;Plátano&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+    <p><strong>Resultado visual:</strong></p>
+    <div class="resultado">
+        <ul>
+            <li>Manzana</li>
+            <li>Pera</li>
+            <li>Plátano</li>
+        </ul>
+    </div>
+
+    <hr />
+
+    <!-- ==================== OL ==================== -->
+    <h2>2. ol — Lista Ordenada</h2>
+    <p>El orden <strong>sí importa</strong>. Números por defecto.</p>
+
+    <p><strong>Código que escribes:</strong></p>
+    <pre><code>&lt;ol&gt;
+    &lt;li&gt;Encender el ordenador&lt;/li&gt;
+    &lt;li&gt;Abrir el navegador&lt;/li&gt;
+    &lt;li&gt;Escribir la URL&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+    <p><strong>Resultado visual:</strong></p>
+    <div class="resultado">
+        <ol>
+            <li>Encender el ordenador</li>
+            <li>Abrir el navegador</li>
+            <li>Escribir la URL</li>
+        </ol>
+    </div>
+
+    <hr />
+
+    <!-- ==================== LI ANIDADO ==================== -->
+    <h2>3. li — Elemento de Lista (anidado)</h2>
+    <p>Un li puede contener otra lista dentro.</p>
+
+    <p><strong>Código que escribes:</strong></p>
+    <pre><code>&lt;ol&gt;
+    &lt;li&gt;Desayuno
+        &lt;ul&gt;
+            &lt;li&gt;Café&lt;/li&gt;
+            &lt;li&gt;Tostada&lt;/li>;
+        &lt;/ul>;
+    &lt;/li>;
+    &lt;li&gt;Almuerzo
+        &lt;ul&gt;
+            &lt;li&gt;Sopa&lt;/li&gt;
+            &lt;li&gt;Pollo&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+    <p><strong>Resultado visual:</strong></p>
+    <div class="resultado">
+        <ol>
+            <li>
+                Desayuno
+                <ul>
+                    <li>Café</li>
+                    <li>Tostada</li>
+                </ul>
+            </li>
+            <li>
+                Almuerzo
+                <ul>
+                    <li>Sopa</li>
+                    <li>Pollo</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <hr />
+
+    <!-- ==================== DL ==================== -->
+    <h2>4. dl — Lista de Definiciones</h2>
+    <p>Pares de <strong>término (dt) + definición (dd)</strong>.</p>
+
+    <p><strong>Código que escribes:</strong></p>
+    <pre><code>&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Lenguaje de marcado para web.&lt;/dd&gt;
+
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Lenguaje de estilos visuales.&lt;/dd&gt;
+
+    &lt;dt&gt;JS&lt;/dt&gt;
+    &lt;dd&gt;Lenguaje de programación.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+    <p><strong>Resultado visual:</strong></p>
+    <div class="resultado">
+        <dl>
+            <dt>HTML</dt>
+            <dd>Lenguaje de marcado para web.</dd>
+
+            <dt>CSS</dt>
+            <dd>Lenguaje de estilos visuales.</dd>
+
+            <dt>JS</dt>
+            <dd>Lenguaje de programación.</dd>
+        </dl>
+    </div>
+
+    <hr />
+
+    <!-- ==================== MENU ==================== -->
+    <h2>5. menu — Lista de Acciones</h2>
+    <p>
+        Semánticamente para <strong>comandos o herramientas</strong>. Visualmente
+        igual que ul.
+    </p>
+
+    <p><strong>Código que escribes:</strong></p>
+    <pre><code>&lt;menu&gt;
+    &lt;li&gt;&lt;button&gt;Copiar&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button&gt;Cortar&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button&gt;Pegar&lt;/button&gt;&lt;/li&gt;
+&lt;/menu&gt;</code></pre>
+
+    <p><strong>Resultado visual:</strong></p>
+    <div class="resultado">
+        <menu>
+            <li><button>Copiar</button></li>
+            <li><button>Cortar</button></li>
+            <li><button>Pegar</button></li>
+        </menu>
+    </div>
+
+    <hr />
+
+    <!-- ==================== RESUMEN ==================== -->
+    <h2>Resumen de Estructuras</h2>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Etiqueta</th>
+            <th>Estructura mínima</th>
+            <th>Para qué sirve</th>
+        </tr>
+        <tr>
+            <td>ul</td>
+            <td><code>ul > li</code></td>
+            <td>Listas sin orden</td>
+        </tr>
+        <tr>
+            <td>ol</td>
+            <td><code>ol > li</code></td>
+            <td>Listas con orden numérico</td>
+        </tr>
+        <tr>
+            <td>li</td>
+            <td>Hija de ul, ol, menu</td>
+            <td>Cada ítem de la lista</td>
+        </tr>
+        <tr>
+            <td>dl</td>
+            <td><code>dl > dt + dd</code></td>
+            <td>Términos y sus definiciones</td>
+        </tr>
+        <tr>
+            <td>dt</td>
+            <td>Hija de dl</td>
+            <td>La palabra o término</td>
+        </tr>
+        <tr>
+            <td>dd</td>
+            <td>Hija de dl (después de dt)</td>
+            <td>La explicación o definición</td>
+        </tr>
+        <tr>
+            <td>menu</td>
+            <td><code>menu > li</code></td>
+            <td>Comandos o acciones interactivas</td>
+        </tr>
+    </table>
+</body>
+
+</html>

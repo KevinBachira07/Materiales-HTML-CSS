@@ -1,0 +1,61 @@
+<!--| Hora          | Lunes        | Martes       | Miércoles    | Jueves       | Viernes      | Sábado    | Domingo   |
+| ------------- | ------------ | ------------ | ------------ | ------------ | ------------ | --------- | --------- |
+| 08:00 - 14:00 | Consulta     | Consulta     | Consulta     | Consulta     | Consulta     | Urgencias | Urgencias |
+| 14:00 - 15:00 | CERRADO      | CERRADO      | CERRADO      | CERRADO      | CERRADO      | Urgencias | Urgencias |
+| 15:00 - 20:00 | Especialista | Especialista | Especialista | Especialista | Especialista | Urgencias | Urgencias |
+| 20:00 - 08:00 | Guardia      | Guardia      | Guardia      | Guardia      | Guardia      | Guardia   | Guardia   |
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table border="2px">
+        <thead>
+            
+            <tr style="background-color: lightcyan;">
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+                <th>Sábado</th>
+                <th>Domingo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>08:00 - 14:00</td>
+                <td colspan="5">Consulta</td>
+                <td colspan="2" rowspan="3"> Urgencias</td>
+            </tr>
+            <tr>
+                <td>14:00 - 15:00</td>
+                <td colspan="5">CERRADO</td>
+            </tr>
+            <tr>
+                <td>15:00 - 20:00</td>
+                <td colspan="5">Especialista</td>
+
+            </tr>
+            <tr>
+                <td>20:00 - 08:00</td>
+                <td colspan="7">Guardia</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            
+        </tfoot>
+    </table>
+</body>
+</html>
