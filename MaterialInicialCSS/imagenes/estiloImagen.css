@@ -1,0 +1,27 @@
+.T1{
+    height: 400px;
+    width: 100%;
+    color: aqua;
+    background-color: azure;
+}
+.T2{
+    height: 554px;
+    width: 100%;
+    background-image: url(KamadoTanjiro.jpeg);
+}
+.T3{
+    height: 415px;
+    width: 100%;
+   background-image: url(Gumball2.jpg);
+   background-position: right;
+   background-repeat: no-repeat;
+   opacity: 0.5;
+}
+.T4{
+    height: 1500px;
+    width: 100%;
+    background-image: url(Mordecay_Rigby.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}

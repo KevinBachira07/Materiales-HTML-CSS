@@ -1,0 +1,25 @@
+/* Comentario*/
+
+label{
+    color: violet;
+    background-color: cyan;
+}/* El estilo se aplicará a todos los elementos <label>.*/
+*{
+    border: 2px solid rgb(255, 144, 33);
+}/* El estilo se aplicará a todos los elementos de la página*/
+legend{
+    background-color: aquamarine;
+}/* El estilo se aplicará a todos los elementos de la etiqueta <legend>*/
+.Importante{
+    font-size: small;
+} /* El estilo se aplicará a cualquier elemento que tenga la clase .importante; es decir class="Importante"*/
+.resaltado{
+    background-color: yellow;
+}
+#panel{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+fieldset p select option{
+    color: blue;
+}

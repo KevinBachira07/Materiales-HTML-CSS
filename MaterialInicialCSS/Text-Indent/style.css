@@ -1,0 +1,31 @@
+.a {
+    text-indent: 0px;
+}/* Dezplazamiento del texto*/
+
+.b {
+    text-indent: 3em;
+}/* Dezplazamiento del texto*/
+
+.c {
+    text-indent: 30%;
+}/* Dezplazamiento del texto*/
+
+.d {
+    text-indent: -50px;
+}/* Dezplazamiento del texto*/
+
+.a {
+    letter-spacing: 3px;
+}/* Espacio entre caracteres */
+
+.b {
+    letter-spacing: 10px;
+}/* Espacio entre caracteres */
+
+.c {
+    letter-spacing: 15px;
+}/* Espacio entre caracteres */
+
+#ejemplo::first-letter {
+    font-size: 50px;
+}/* pseudoclase */
