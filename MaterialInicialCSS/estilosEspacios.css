@@ -13,3 +13,12 @@ div{
 #importante{
     background-color: tomato;
 }
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url(../26.2-Minecraft-Bold.otf);
+}
+
+body{
+    font-family: 'Minecraft';
+}
