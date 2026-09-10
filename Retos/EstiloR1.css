@@ -1,0 +1,29 @@
+body{
+    background-image: url(pergamino.jpeg);
+    background-size: 1000px 1000px;
+    background-repeat: no-repeat;
+    background-position: left;
+    font-family: "Viejo";
+}
+div p{
+    word-spacing: 30px;
+    vertical-align:middle;
+    float: left;
+    margin-right: 8px;
+}
+
+.M {
+    font-size: 80px;
+    background-image: url(Fondo.jpeg);
+    background-repeat: no-repeat;
+    
+    padding-right: 8px;
+    line-height: 70px;
+    float: left;
+}
+
+@font-face {
+    font-family: "Viejo";
+    src: url(AlteSchwabacher.ttf);
+}
+

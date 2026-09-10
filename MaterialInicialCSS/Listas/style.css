@@ -1,4 +1,5 @@
-.a {list-style-type: circle;}
+.a {list-style-type: '✅';}
 .b {list-style-type: square;}
-.c {list-style-type: upper-roman;}
+.c {list-style-type: upper-roman;
+list-style-position: inside;}
 .d {list-style-type: lower-alpha;}
