@@ -1,0 +1,36 @@
+body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a1a1a;
+        }
+
+        .tarjeta {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(45deg, #ff6b6b, #48dbfb);
+            border-radius: 15px;
+            
+            /* Usamos 's' (segundos) para una animación infinita de 1 vuelta completa (turn) */
+            animation: girarContinuo 4s linear infinite;
+            
+            /* Usamos 'ms' (milisegundos) y 's' para transiciones rápidas al hacer hover */
+            transition: transform 300ms ease, box-shadow 0.5s ease;
+        }
+
+        /* Al pasar el cursor, aumentamos el giro usando grados (deg) y cambiamos la sombra */
+        .tarjeta:hover {
+            transform: scale(1.1) rotate(45deg);
+            box-shadow: 0px 10px 25px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Definición de la animación que usa turnos (turn) */
+        @keyframes girarContinuo {
+            from {
+                transform: rotate(0turn);
+            }
+            to {
+                transform: rotate(1turn);
+            }
+        }

@@ -1,0 +1,27 @@
+* {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25vh;
+            background-color: #1a1a1a;
+        }
+
+        .caja-borde-imagen {
+            width: 300px;
+            height: 150px;
+            padding: 20px;
+            color: white;
+            font-family: sans-serif;
+            
+            /* El borde debe tener un grosor definido y ser transparente para que se luzca la imagen */
+            border: 20px solid transparent;
+            
+            /* Reemplaza 'tu-imagen-aqui.png' por la URL o ruta de tu imagen */
+            border-image: url(/MaterialInicialCSS/imagenes/Mordecay_Rigby.jpg) 30 round;
+            
+            background-color: #333;
+        }

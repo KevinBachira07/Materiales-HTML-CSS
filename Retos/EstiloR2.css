@@ -1,0 +1,56 @@
+body {
+    background-color: floralwhite;
+}
+.barra {
+    display: flex;                 
+    justify-content: space-between;
+    align-items: center;
+    background-color:azure;         
+}
+ul li{
+    list-style: none;
+    text-align: center;
+    display: inline;
+    padding: 30px;
+}
+a {
+    color: deepskyblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover{
+    color: lightskyblue;
+}
+
+.fondo{
+    object-fit: cover;
+    outline: 8px ridge rgb(170, 50, 220);
+    border-radius: 2rem;
+}
+h6{
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+}
+.tarjeta{
+    outline: 8px ridge rgb(170, 50, 220);
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+}
+
+.contenido_tarjeta{
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.contenedor_tarjetas {
+        display: flex;
+        justify-content: center; 
+        gap: 20px;               
+        padding: 40px;
+        background-color: #f4f4f4;
+}
