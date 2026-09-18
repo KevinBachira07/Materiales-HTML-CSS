@@ -1,56 +1,107 @@
 body {
     background-color: floralwhite;
 }
+.contenedor_logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    width: 100px;
+    height: 80px;
+}
 .barra {
     display: flex;                 
     justify-content: space-between;
     align-items: center;
-    background-color:azure;         
+    background-color:azure;
+    animation: deslizarDesdeIzquierda 1s ease-out;
 }
-ul li{
+li{
     list-style: none;
     text-align: center;
     display: inline;
     padding: 30px;
 }
-a {
+.opcion{
     color: deepskyblue;
     text-decoration: none;
     font-weight: bold;
 }
-a:hover{
+.opcion:hover{
+    animation: parpadeo 1s infinite;
     color: lightskyblue;
 }
-
-.fondo{
-    object-fit: cover;
-    outline: 8px ridge rgb(170, 50, 220);
-    border-radius: 2rem;
-}
-h6{
+.contenedor_fondo{
     width: 100%;
-    font-size: 40px;
-    text-align: center;
-}
-.tarjeta{
-    outline: 8px ridge rgb(170, 50, 220);
-    border: 1px solid;
+    height: 300px;
+    background-image: url(fondoPS.jpg);
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
-    border-radius: 2rem;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    animation: deslizarDesdeIzquierda 2s ease-out;/*El ease-out es para que la animación se mueva desde la izquierda y vaya frenando suavemente*/
+}
+.contenedor_imagen{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.imagen{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+h2{
+    width: 100%;
+    text-align: center;
+    padding-top: 60px;
 }
 
+.contenedor_tarjetas {
+        display: flex;
+        justify-content: center; 
+        gap: 50px;               
+        padding: 20px;
+        animation: deslizarDesdeIzquierda 1.5s ease-out;
+}
 .contenido_tarjeta{
     padding: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 1; /* Esto es para que el elmento crezca si hay un espacio vacío */
 }
-.contenedor_tarjetas {
-        display: flex;
-        justify-content: center; 
-        gap: 20px;               
-        padding: 40px;
-        background-color: #f4f4f4;
+.tarjeta{
+    width: 350px;
+    height: 550px;
+    background-color: floralwhite;
+    /*outline: 8px ridge rgb(170, 50, 220);
+    border: 1px solid; por si quiero un bordecito*/
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.boton{
+    text-decoration: none;
+    background-color: deepskyblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+@keyframes deslizarDesdeIzquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); 
+    }
 }
