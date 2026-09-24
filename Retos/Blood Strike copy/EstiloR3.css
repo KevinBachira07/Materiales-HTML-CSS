@@ -1,0 +1,93 @@
+.cajon{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    position: fixed;
+    height: 70px;
+    align-items: center;
+    font-size: 11px;
+    width: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url(FondoBS.jpg);
+    background-size: cover;
+    background-position: relative;
+    background-repeat: no-repeat;
+}
+.logo{
+    width: 10%;
+    padding-left: 20px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav1{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.nav2{
+    position: absolute;
+    display: none;
+    top: 100%;
+    flex-direction: column;
+    background-color: black;
+    list-style: none;
+}
+.nav3{
+    color: white;
+    position: absolute;
+    display: none;
+    top: 100%;
+    flex-direction: row;
+    background-color: black;
+    gap: 10px;
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+p{
+    color: white;
+}
+.Enlace{
+    color: skyblue;
+}
+
+.botonReg{
+    background-color: yellow;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+}
+.botonLeng, .botonReg{
+    position: relative;
+}
+.botonLeng:hover .nav2,
+.botonReg:hover .nav3 {
+    display: flex;
+}
+.Lista:hover {
+    color: yellow;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+p:hover{
+    color: yellow;
+    cursor: pointer;
+}
+h1:hover{
+    cursor: pointer;
+}
+.Enlace:hover{
+    text-decoration: underline skyblue;
+    text-decoration-thickness: 2px;
+}
