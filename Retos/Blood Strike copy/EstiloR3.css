@@ -5,50 +5,47 @@
     position: fixed;
     height: 70px;
     align-items: center;
-    font-size: 11px;
     width: 100%;
 }
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
     background-image: url(FondoBS.jpg);
     background-size: cover;
     background-position: relative;
     background-repeat: no-repeat;
 }
 .logo{
-    width: 10%;
+    height: 35px;
+    width: auto;
     padding-left: 20px;
 }
 nav{
     display: flex;
     align-items: center;
     gap: 30px;
+    height: 100%;
 }
 .nav1{
     display: flex;
     list-style: none;
     gap: 20px;
+    font-size: 14px;
+}
+.nav2, .nav3{
+    position: absolute;
+    display: none;
+    top: 100%;
+    background-color: black;
+    list-style: none;
+    padding: 10px;
 }
 .nav2{
-    position: absolute;
-    display: none;
-    top: 100%;
     flex-direction: column;
-    background-color: black;
-    list-style: none;
 }
 .nav3{
-    color: white;
-    position: absolute;
-    display: none;
-    top: 100%;
     flex-direction: row;
-    background-color: black;
     gap: 10px;
-    list-style: none;
-
 }
 a{
     text-decoration: none;
@@ -56,6 +53,7 @@ a{
 }
 p{
     color: white;
+    margin: 0;
 }
 .Enlace{
     color: skyblue;
@@ -68,11 +66,14 @@ p{
     align-items: center;
     padding: 0 40px;
 }
-.botonLeng, .botonReg{
+.botonLeng, .botonRed{
     position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 .botonLeng:hover .nav2,
-.botonReg:hover .nav3 {
+.botonRed:hover .nav3 {
     display: flex;
 }
 .Lista:hover {
@@ -90,4 +91,8 @@ h1:hover{
 .Enlace:hover{
     text-decoration: underline skyblue;
     text-decoration-thickness: 2px;
+}
+@font-face {
+    font-family: "BloodStrike";
+    src: url(Oswald.ttf);
 }
